@@ -12,9 +12,9 @@ for (var i = 0; i < elements.length; i++) {
             var urls = "https://food-finder-service.herokuapp.com/api/foodplaces?name=" + searchText.toString();
             xhr.open("GET", urls, false);
             xhr.send();
-            xmlDoc=xhr.responseText;
-            var div = document.createElement("div");
-            div.innerHTML = xmlDoc;
+            xmlDoc = xhr.responseText;
+            // var div = document.createElement("div");
+            element.innerHTML = xmlDoc;
             // div.style.width = "100px";
             // div.style.height = "100px";
             // div.style.background = "red";
