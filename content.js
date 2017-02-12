@@ -14,12 +14,19 @@ for (var i = 0; i < elements.length; i++) {
             xhr.send();
             xmlDoc = xhr.responseText;
             // var div = document.createElement("div");
-            element.innerHTML = xmlDoc;
-            // div.style.width = "100px";
-            // div.style.height = "100px";
-            // div.style.background = "red";
-            // div.style.color = "white";
-            // div.innerHTML = "Hello";
+            var jsonResponse = JSON.parse(xmlDoc);
+            for(i= 0; i< jsonResponse.length; i++){
+                element.innerHTML += "<br>";
+                element.innerHTML += jsonResponse[i]["name"];
+                element.innerHTML += jsonResponse[i]["address"];
 
+            }
+            // for( var i = 0; i < data.length; i++ )
+            // {
+            //     o = data[i];
+            //     var li = document.createElement("li");
+            //     li.appendChild(document.createTextNode(o.title));
+            //     ul.appendChild(li);
+            // }
     }
 }
