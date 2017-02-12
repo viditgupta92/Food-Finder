@@ -15,9 +15,11 @@ for (var i = 0; i < elements.length; i++) {
             xmlDoc = xhr.responseText;
             // var div = document.createElement("div");
             var jsonResponse = JSON.parse(xmlDoc);
+            element = elements[i+1];
             for(i= 0; i< jsonResponse.length; i++){
                 element.innerHTML += "<br>";
                 element.innerHTML += jsonResponse[i]["name"];
+                element.innerHTML += " ,  ";
                 element.innerHTML += jsonResponse[i]["address"];
 
             }
