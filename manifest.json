@@ -1,0 +1,18 @@
+{
+  "name": "Page action by URL",
+  "version": "1.0",
+  "description": "Shows a page action for urls which have 'facebook.com' in them.",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action" :
+  {
+    "default_icon" : "icon.png",
+    "default_title" : "Facebook in this URL!"
+  },
+  "permissions" : [
+    "declarativeContent"
+  ],
+  "manifest_version": 2
+}
